@@ -17,6 +17,11 @@ What it does
 
 While using a debounced resize event, the script checks the widths of the elements (includes paddings) and attaches the necessary width classes to the element.
 
+Demo
+----
+
+[Demo link](http://bfintal.github.io/Selector-Query/demo/demo.html)
+
 Width stops & classes
 ---------------------
 
