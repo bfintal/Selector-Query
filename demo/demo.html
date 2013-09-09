@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Selector Query Demo</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <style>
+    body {
+        margin: 40px 0 0;
+    }
+    * {
+        font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        max-width: 1024px;
+        margin: 0 auto 40px;
+    }
+    .styled {
+        background: #D9CEBF;
+        padding: 20px;
+        margin: 10px 1%;
+        -moz-box-sizing: border-box; 
+        -webkit-box-sizing: border-box; 
+        box-sizing: border-box;
+    }
+    .styled.col1.max-960 {
+        background: #E76861;
+    }
+    .styled.col1.max-480 {
+        background: #A2A195;
+    }
+    .styled.col2 {
+        width: 48%;
+        float: left;
+    }
+    .styled.col3 {
+        width: 31.3%;
+        float: left;
+    }
+    .styled.col2.max-480 {
+        background: #E76861;
+    }
+    .styled.col3.max-480 {
+        background: #E76861;
+    }
+    .styled.col3.max-320 {
+        background: #A2A195;
+    }
+    .clearfix {
+        clear: both;
+    }
+  </style>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    jQuery(document).ready(function( $ ) {
+        $('.styled').selectorQuery();
+    });
+  </script>
+</head>
+
+<body>
+    <h1>Selector Query adds max-* classes when certain width stops reached. Try resizing your browser. </h1>
+    <div class='styled col1'>This box changes colors when resized down to 1024 px width and again on 480 px</div>
+    <div class='styled col2'>This box changes colors when resized down to 480 px width</div>
+    <div class='styled col2'>This box changes colors when resized down to 480 px width</div>
+    <div class='clearfix'></div>
+    <div class='styled col3'>This box changes colors when resized down to 480 px width and again on 320 px</div>
+    <div class='styled col3'>This box changes colors when resized down to 480 px width and again on 320 px</div>
+    <div class='styled col3'>This box changes colors when resized down to 480 px width and again on 320 px</div>
+    <div class='clearfix'></div>
+    <script src="../jquery.selectorquery.min.js"></script>
+</body>
+</html>
