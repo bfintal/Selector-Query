@@ -12,10 +12,14 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <style>
     body {
-        margin: 40px 0 0;
+        margin: 40px 0 150px;
     }
     * {
         font-family: 'Open Sans', sans-serif;
+        -webkit-transition: all 400ms ease;
+        -moz-transition: all 400ms ease;
+        -o-transition: all 400ms ease;
+        transition: all 400ms ease;
     }
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Lato', sans-serif;
@@ -23,39 +27,74 @@
         max-width: 1024px;
         margin: 0 auto 40px;
     }
-    .styled {
+    h2 {
+        margin-top: 40px;
+    }
+    .styled, .testimonial {
         background: #D9CEBF;
         padding: 20px;
         margin: 10px 1%;
-        -moz-box-sizing: border-box; 
-        -webkit-box-sizing: border-box; 
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
-    .styled.col1.max-960 {
+    .col1.max-960 {
         background: #E76861;
     }
-    .styled.col1.max-480 {
+    .col1.max-480 {
         background: #A2A195;
     }
-    .styled.col2 {
+    .col2 {
         width: 48%;
         float: left;
     }
-    .styled.col3 {
+    .col3 {
         width: 31.3%;
         float: left;
     }
-    .styled.col2.max-480 {
+    .col2.max-480 {
         background: #E76861;
     }
-    .styled.col3.max-480 {
+    .col3.max-480 {
         background: #E76861;
     }
-    .styled.col3.max-320 {
+    .col3.max-320 {
         background: #A2A195;
     }
     .clearfix {
         clear: both;
+    }
+    .testimonial .avatar {
+        height: 150px;
+        width: 150px;
+        -webkit-border-radius: 150px;
+        border-radius: 150px;
+        display: block;
+        background: #fff;
+        float: left;
+        margin: 0 20px 0 0;
+    }
+    .testimonial .text {
+        overflow: hidden;
+        color: #fff;
+        display: block;
+    }
+    .testimonial.max-960 .avatar {
+        height: 100px;
+        width: 100px;
+    }
+    .testimonial.max-480 .avatar {
+        height: 150px;
+        width: 150px;
+        margin: 0 auto 20px;
+        float: none;
+    }
+    .testimonial.max-320 .avatar {
+        height: 100px;
+        width: 100px;
+    }
+    .testimonial {
+        background: #E76861 !important;
     }
   </style>
 
@@ -65,13 +104,14 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>
     jQuery(document).ready(function( $ ) {
-        $('.styled').selectorQuery();
+        $('.styled, .testimonial').selectorQuery();
     });
   </script>
 </head>
 
 <body>
     <h1>Selector Query adds max-* classes when certain width stops reached. Try resizing your browser. </h1>
+    <h2>Columns that change color depending on max width</h2>
     <div class='styled col1'>This box changes colors when resized down to 1024 px width and again on 480 px</div>
     <div class='styled col2'>This box changes colors when resized down to 480 px width</div>
     <div class='styled col2'>This box changes colors when resized down to 480 px width</div>
@@ -79,6 +119,15 @@
     <div class='styled col3'>This box changes colors when resized down to 480 px width and again on 320 px</div>
     <div class='styled col3'>This box changes colors when resized down to 480 px width and again on 320 px</div>
     <div class='styled col3'>This box changes colors when resized down to 480 px width and again on 320 px</div>
+    <div class='clearfix'></div>
+    <h2>Testimonial box sample</h2>
+    <div class='testimonial col1'><span class='avatar'></span><span class='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar imperdiet nunc et pretium. Fusce ac ante a enim commodo vehicula id quis nulla. Aenean et volutpat quam. Morbi nec blandit mi, quis rhoncus magna. Proin ac tempus risus. Aenean condimentum orci hendrerit, lacinia elit sit amet, varius eros. Nullam dapibus convallis libero vitae vestibulum. Proin ac viverra lectus.</span><div class='clearfix'></div></div>
+    <div class='testimonial col2'><span class='avatar'></span><span class='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar imperdiet nunc et pretium. Fusce ac ante a enim commodo vehicula id quis nulla. Aenean et volutpat quam. Morbi nec blandit mi, quis rhoncus magna. Proin ac tempus risus.</span></div>
+    <div class='testimonial col2'><span class='avatar'></span><span class='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar imperdiet nunc et pretium. Fusce ac ante a enim commodo vehicula id quis nulla. Aenean et volutpat quam. Morbi nec blandit mi, quis rhoncus magna. Proin ac tempus risus.</span></div>
+    <div class='clearfix'></div>
+    <div class='testimonial col3'><span class='avatar'></span><span class='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar imperdiet nunc et pretium. Fusce ac ante a enim commodo vehicula id quis nulla. Aenean et volutpat quam. Morbi nec blandit mi, quis rhoncus magna. Proin ac tempus risus. Aenean condimentum orci hendrerit, lacinia elit sit amet, varius eros.</span></div>
+    <div class='testimonial col3'><span class='avatar'></span><span class='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar imperdiet nunc et pretium. Fusce ac ante a enim commodo vehicula id quis nulla. Aenean et volutpat quam. Morbi nec blandit mi, quis rhoncus magna. Proin ac tempus risus. Aenean condimentum orci hendrerit, lacinia elit sit amet, varius eros.</span></div>
+    <div class='testimonial col3'><span class='avatar'></span><span class='text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar imperdiet nunc et pretium. Fusce ac ante a enim commodo vehicula id quis nulla. Aenean et volutpat quam. Morbi nec blandit mi, quis rhoncus magna. Proin ac tempus risus. Aenean condimentum orci hendrerit, lacinia elit sit amet, varius eros.</span></div>
     <div class='clearfix'></div>
     <script src="../jquery.selectorquery.min.js"></script>
 </body>
