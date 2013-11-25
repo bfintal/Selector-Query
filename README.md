@@ -69,3 +69,5 @@ License
 GPL v2 licensed
 
 Copyright (c) 2013 [Benjamin Intal](http://twitter.com/bfintal).
+
+Google+: <a href='https://plus.google.com/113101541449927918834' rel='author'>+Benjamin Intal</a>
