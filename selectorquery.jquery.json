@@ -1,0 +1,34 @@
+{
+  "name": "selectorquery",
+  "version": "1.0.0",
+  "title": "Selector-Query",
+  "description": "A jQuery plugin that adds selector classes to elements depending on its width. Think of media queries but for element widths instead of browser widths.",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "selector",
+    "media",
+    "query",
+    "selectors",
+    "responsive",
+    "fluid",
+    "width",
+    "adjust"
+  ],
+  "homepage": "https://github.com/bfintal/Selector-Query",
+  "author": {
+    "name": "Benjamin Intal",
+    "url": "https://github.com/bfintal/"
+  },
+  "bugs": "https://github.com/bfintal/Selector-Query/issues",
+  "licenses": [
+    {
+      "type": "GPL2",
+      "url": "https://raw.github.com/bfintal/Selector-Query/master/LICENSE"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.5"
+  },
+  "demo": "http://bfintal.github.io/Selector-Query/demo/demo.html"
+}
